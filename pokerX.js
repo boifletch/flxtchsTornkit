@@ -658,7 +658,10 @@ function autoBuyIn_init() {
       let failed = 0;
       getBuyInButton().click();
       const interv = setInterval(() => {
-        if (failed > 30) throw new Error("couldn't fetch confirmation button");
+        if (failed > 30) {
+          clearInterval(interv);
+          throw new Error("couldn't fetch confirmation button");
+        }
         confirmationButton = !confirmationButton
           ? getConfirmationButton()
           : confirmationButton; // don't fetch again on retry
