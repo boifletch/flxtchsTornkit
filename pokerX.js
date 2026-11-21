@@ -7,6 +7,7 @@
 // @grant           none
 // @run-at          document-end
 // @description     a work-in-progress extension to torn's poker tables.
+// @license         MIT
 // ==/UserScript==
 class EventAction {
   get id() {
