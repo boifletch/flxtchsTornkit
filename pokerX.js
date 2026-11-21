@@ -6,6 +6,7 @@
 // @match           https://www.torn.com/page.php?sid=holdem*
 // @grant           none
 // @run-at          document-end
+// @description     a work-in-progress extension to torn's poker tables.
 // ==/UserScript==
 class EventAction {
   get id() {
@@ -663,7 +664,7 @@ function autoBuyIn_init() {
         if (!confirmationButton || confirmationButton.disable) return failed++; //retry
         confirmationButton.click();
         window.location.reload();
-        //? technically below not needed because of reload but 
+        //? technically below not needed because of reload but
         // //? it still feels wrong to exclude memory-leak-preventing code
         onDisable();
         clearInterval(interv);
