@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            pokerX
 // @namespace       https://tampermonkey.net/
-// @version         1.0
+// @version         1.01
 // @author          flxtch
 // @match           https://www.torn.com/page.php?sid=holdem*
 // @grant           none
@@ -662,7 +662,7 @@ function autoBuyIn_init() {
         confirmationButton = !confirmationButton
           ? getConfirmationButton()
           : confirmationButton; // don't fetch again on retry
-        if (!confirmationButton || confirmationButton.disable) return failed++; //retry
+        if (!confirmationButton || confirmationButton.disabled) return failed++; //retry
         confirmationButton.click();
         window.location.reload();
         //? technically below not needed because of reload but
