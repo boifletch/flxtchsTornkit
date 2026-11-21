@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            pokerX
 // @namespace       https://tampermonkey.net/
-// @version         1.01
+// @version         1.02
 // @author          flxtch
 // @match           https://www.torn.com/page.php?sid=holdem*
 // @grant           none
