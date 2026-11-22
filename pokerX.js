@@ -712,7 +712,6 @@ function ctof_init() {
     }
     if (tapi.activeSeat === 0) {
       onClientTurn();
-      return;
     }
     tapi.sub_onClientTurn(onClientTurn);
     tapi.sub_onPhaseChange(onPhaseChange);
